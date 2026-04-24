@@ -571,7 +571,18 @@ h3 {
 }
 
 .menu-card.is-active {
-  animation: hero-copy-rise 0.35s ease;
+  transform-origin: center bottom;
+  will-change: opacity, transform;
+}
+
+.menu-card.is-entering-next {
+  animation: menu-card-slide-next 0.58s cubic-bezier(0.18, 0.78, 0.25, 1)
+    both;
+}
+
+.menu-card.is-entering-prev {
+  animation: menu-card-slide-prev 0.58s cubic-bezier(0.18, 0.78, 0.25, 1)
+    both;
 }
 
 .menu-card.is-muted {
@@ -731,6 +742,40 @@ h3 {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes menu-card-slide-next {
+  from {
+    opacity: 0;
+    transform: translate3d(54px, 16px, 0) rotate(1.6deg) scale(0.97);
+  }
+
+  62% {
+    opacity: 1;
+    transform: translate3d(-6px, -2px, 0) rotate(-0.25deg) scale(1.01);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate(0) scale(1);
+  }
+}
+
+@keyframes menu-card-slide-prev {
+  from {
+    opacity: 0;
+    transform: translate3d(-54px, 16px, 0) rotate(-1.6deg) scale(0.97);
+  }
+
+  62% {
+    opacity: 1;
+    transform: translate3d(6px, -2px, 0) rotate(0.25deg) scale(1.01);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate(0) scale(1);
   }
 }
 
