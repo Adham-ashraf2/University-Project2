@@ -32,3 +32,34 @@ menuArrows.forEach((arrow) => {
 if (menuCards.length && menuArrows.length) {
   showMenuCard(activeMenuIndex);
 }
+
+const revealItems = Array.from(document.querySelectorAll("[data-reveal]"));
+
+if (revealItems.length && "IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        const delay = entry.target.dataset.revealDelay;
+
+        if (delay) {
+          entry.target.style.transitionDelay = `${delay}ms`;
+        }
+
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.16,
+      rootMargin: "0px 0px -8% 0px",
+    },
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+}

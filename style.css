@@ -912,9 +912,397 @@ select:focus {
   font-family: "Noto Serif", Georgia, serif;
   font-weight: 700;
 }
+
+.about-header {
+  position: sticky;
+  top: 18px;
+  left: auto;
+  right: auto;
+  width: min(calc(100% - 32px), var(--max-width));
+  margin: 18px auto 0;
+  transform: none;
+}
+
+.about-section {
+  padding: clamp(72px, 10vw, 132px)
+    max(24px, calc((100vw - var(--max-width)) / 2));
+}
+
+.about-story {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.62fr);
+  gap: clamp(34px, 8vw, 104px);
+  align-items: end;
+  padding-top: clamp(58px, 8vw, 96px);
+}
+
+.about-copy {
+  max-width: 690px;
+}
+
+.about-copy h1 {
+  margin-top: 18px;
+  font-size: clamp(4.4rem, 9vw, 8rem);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.about-copy h1 span {
+  color: var(--primary);
+}
+
+.about-copy p:not(.eyebrow),
+.origin-copy p,
+.craft-copy p {
+  max-width: 520px;
+  margin-top: 24px;
+  color: var(--on-surface-soft);
+}
+
+.portrait-frame {
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius);
+  box-shadow: 0 24px 58px rgba(28, 28, 25, 0.12);
+}
+
+.portrait-frame img,
+.origin-gallery img,
+.craft-grid img {
+  transform: scale(1.04);
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.75, 0.22, 1),
+    filter 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.chef-philosophy {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  background: var(--surface-low);
+  text-align: center;
+}
+
+.quote-mark {
+  position: absolute;
+  color: rgba(137, 76, 42, 0.08);
+  font-family: "Noto Serif", Georgia, serif;
+  font-size: clamp(8rem, 18vw, 15rem);
+  line-height: 1;
+  transform: translateY(-18%);
+}
+
+.chef-symbol {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  margin-bottom: 18px;
+  color: var(--primary);
+  border: 1px solid rgba(137, 76, 42, 0.26);
+  border-radius: 999px;
+  font-family: "Noto Serif", Georgia, serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.chef-philosophy h2,
+.origin h2,
+.craft h2,
+.about-cta h2 {
+  font-size: clamp(2.8rem, 6vw, 5.3rem);
+}
+
+.chef-philosophy blockquote {
+  max-width: 650px;
+  margin: 26px 0 0;
+  color: var(--on-surface-soft);
+  font-family: "Noto Serif", Georgia, serif;
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.chef-credit {
+  margin-top: 38px;
+  color: var(--primary);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.chef-role {
+  color: var(--on-surface-soft);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.origin {
+  display: grid;
+  grid-template-columns: minmax(290px, 0.82fr) minmax(0, 1fr);
+  gap: clamp(34px, 8vw, 96px);
+  align-items: center;
+}
+
+.origin-copy {
+  max-width: 600px;
+}
+
+.origin-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 32px;
+}
+
+.origin-stats article {
+  display: grid;
+  gap: 7px;
+}
+
+.origin-stats strong {
+  color: var(--primary);
+  font-family: "Noto Serif", Georgia, serif;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.origin-stats span {
+  color: var(--on-surface-soft);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.origin-gallery {
+  display: grid;
+  gap: 22px;
+}
+
+.origin-gallery img:first-child {
+  aspect-ratio: 5 / 4;
+}
+
+.origin-gallery img:last-child {
+  aspect-ratio: 16 / 9;
+}
+
+.origin-gallery img,
+.craft-grid img {
+  border-radius: var(--radius);
+  box-shadow: 0 22px 52px rgba(28, 28, 25, 0.1);
+}
+
+.portrait-frame:hover img,
+.origin-gallery img:hover,
+.craft-grid img:hover {
+  filter: saturate(1.08) contrast(1.04);
+  transform: scale(1.09);
+}
+
+.craft {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.2fr);
+  gap: clamp(34px, 8vw, 100px);
+  align-items: start;
+  background: var(--surface-low);
+}
+
+.craft-copy {
+  position: sticky;
+  top: 130px;
+}
+
+.food-word {
+  position: relative;
+  display: inline-block;
+  color: var(--primary);
+  font-style: italic;
+}
+
+.food-word::after {
+  position: absolute;
+  right: -0.08em;
+  bottom: -0.16em;
+  left: 0.02em;
+  height: 0.18em;
+  background:
+    radial-gradient(circle at 8% 55%, var(--primary) 0 8%, transparent 9%),
+    linear-gradient(90deg, var(--primary), var(--primary-container));
+  border-radius: 999px 48% 999px 40%;
+  content: "";
+  opacity: 0.86;
+  transform: rotate(-2deg);
+  transform-origin: left center;
+}
+
+.food-word::before {
+  position: absolute;
+  right: -0.28em;
+  top: -0.16em;
+  color: var(--primary-container);
+  content: "\2022";
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 0.28em;
+  line-height: 1;
+}
+
+.craft-grid {
+  display: grid;
+  gap: 22px;
+}
+
+.craft-grid img:nth-child(1) {
+  aspect-ratio: 16 / 10;
+}
+
+.craft-grid img:nth-child(2) {
+  aspect-ratio: 4 / 3;
+}
+
+.craft-grid img:nth-child(3) {
+  aspect-ratio: 16 / 9;
+}
+
+.about-cta {
+  display: grid;
+  justify-items: center;
+  gap: 28px;
+  text-align: center;
+}
+
+.about-cta h2 {
+  max-width: 650px;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 34px, 0);
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.75, 0.22, 1),
+    transform 0.8s cubic-bezier(0.2, 0.75, 0.22, 1);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.about-story .eyebrow,
+.about-story h1,
+.about-story p,
+.chef-symbol,
+.chef-philosophy h2,
+.chef-philosophy blockquote,
+.chef-credit,
+.chef-role,
+.about-cta h2,
+.about-cta .button {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.is-visible .eyebrow,
+.is-visible h1,
+.is-visible p,
+.is-visible .chef-symbol,
+.is-visible h2,
+.is-visible blockquote,
+.is-visible .chef-credit,
+.is-visible .chef-role,
+.is-visible .button {
+  animation: about-line-rise 0.72s cubic-bezier(0.2, 0.75, 0.22, 1) forwards;
+}
+
+.is-visible h1,
+.is-visible h2 {
+  animation-delay: 0.1s;
+}
+
+.is-visible p,
+.is-visible blockquote {
+  animation-delay: 0.2s;
+}
+
+.is-visible .button,
+.is-visible .chef-credit {
+  animation-delay: 0.3s;
+}
+
+@keyframes about-line-rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /*Adham*/
 
 @media (max-width: 700px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    left: auto;
+    width: 100%;
+    grid-template-columns: 1fr auto;
+    margin: 0;
+    border-radius: 0;
+    transform: none;
+  }
+
+  .main-nav {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    font-size: 0.78rem;
+  }
+
+  h1 {
+    font-size: clamp(4rem, 18vw, 6.2rem);
+  }
+
+  h2 {
+    font-size: clamp(3rem, 13vw, 4.8rem);
+  }
+
+  .hero {
+    min-height: 92vh;
+    padding-top: 132px;
+  }
+
+  .hero-note {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    margin-top: 34px;
+  }
+
+  .intro,
+  .feature-band,
+  .section-heading,
+  .rooms,
+  .room-list,
+  .about-story,
+  .origin,
+  .craft {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-image {
+    min-height: 340px;
+    margin-left: 0;
+  }
+
+  .room-list article:first-child {
+    margin-bottom: 0;
+  }
+
   .menu-slider {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -930,5 +1318,25 @@ select:focus {
 
   .menu-arrow:last-of-type {
     order: 3;
+  }
+
+  .about-story {
+    padding-top: 52px;
+  }
+
+  .about-copy h1 {
+    font-size: clamp(4rem, 17vw, 5.8rem);
+  }
+
+  .portrait-frame {
+    max-width: 360px;
+  }
+
+  .origin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .craft-copy {
+    position: static;
   }
 }
