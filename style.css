@@ -930,7 +930,7 @@ textarea {
 
 .about-story {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.62fr);
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
   gap: clamp(34px, 8vw, 104px);
   align-items: end;
   padding-top: clamp(58px, 8vw, 96px);
@@ -942,13 +942,20 @@ textarea {
 
 .about-copy h1 {
   margin-top: 18px;
-  font-size: clamp(4.4rem, 9vw, 8rem);
+  font-size: clamp(2.35rem, 6.5vw, 4.9rem);
   font-style: italic;
   font-weight: 500;
+  line-height: 1;
 }
 
-.about-copy h1 span {
+.about-title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.about-copy h1 em {
   color: var(--primary);
+  font-style: inherit;
 }
 
 .about-copy p:not(.eyebrow),
@@ -2566,6 +2573,16 @@ textarea {
 
 .dessert-menu-dark strong {
   color: var(--secondary-container);
+}
+
+@media (max-width: 760px) {
+  .about-story {
+    grid-template-columns: 1fr;
+  }
+
+  .about-title-line {
+    white-space: normal;
+  }
 }
 
 
