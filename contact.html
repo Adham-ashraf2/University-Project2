@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Maison Liora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header about-header">
+      <a class="brand" href="index.html#home">Maison Liora</a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html#home">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="contact.html" aria-current="page">Contact us</a>
+        <a href="about.html">About us</a>
+        <a href="locations.html">Locations</a>
+        <a href="reservations.html">Booking</a>
+      </nav>
+    </header>
+
+    <main class="contact-page">
+      <section class="contact-hero about-section" aria-labelledby="contact-title">
+        <div class="contact-hero-copy" data-reveal>
+          <p class="eyebrow">Guest care</p>
+          <h1 id="contact-title">Tell Us What Happened</h1>
+          <p>
+            Send feedback, service notes, or customer issues directly to our
+            front-of-house team. We review every message with care.
+          </p>
+        </div>
+
+        <aside class="contact-hours" data-reveal data-reveal-delay="140">
+          <p class="eyebrow">Response window</p>
+          <h2>We reply within 24 hours.</h2>
+          <dl>
+            <div>
+              <dt>Guest support</dt>
+              <dd>10:00 AM - 11:00 PM</dd>
+            </div>
+            <div>
+              <dt>Urgent bookings</dt>
+              <dd>+20 102 555 0198</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="contact-layout about-section" aria-label="Contact options and feedback form">
+        <aside class="contact-side" data-reveal>
+          <div class="contact-card">
+            <h2>Reach Out</h2>
+            <article>
+              <span aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z" />
+                </svg>
+              </span>
+              <div>
+                <h3>Address</h3>
+                <p>12 Garden Passage, Zamalek, Cairo</p>
+              </div>
+            </article>
+            <article>
+              <span aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.57 1 1 0 0 1-.24 1.02Z" />
+                </svg>
+              </span>
+              <div>
+                <h3>Phone</h3>
+                <p>+20 102 555 0198</p>
+              </div>
+            </article>
+            <article>
+              <span aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm-.4 4.25-7.08 4.42a1 1 0 0 1-1.04 0L4.4 8.25 5.46 6.55 12 10.64l6.54-4.09Z" />
+                </svg>
+              </span>
+              <div>
+                <h3>Email</h3>
+                <p>care@maisonliora.example</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="issue-guide">
+            <h2>What to Include</h2>
+            <p>
+              For customer issues, share your visit date, reservation name,
+              order details, and the best way for us to follow up.
+            </p>
+          </div>
+        </aside>
+
+        <form class="feedback-form" data-contact-form data-reveal data-reveal-delay="120">
+          <div class="form-heading">
+            <h2>Feedback & Issues</h2>
+          </div>
+
+          <div class="form-grid form-row" data-reveal data-reveal-delay="80">
+            <label>
+              <span>Full name</span>
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+
+            <label>
+              <span>Email address</span>
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+          </div>
+
+          <div class="form-grid form-row" data-reveal data-reveal-delay="150">
+            <label>
+              <span>Message type</span>
+              <select name="type" required>
+                <option value="">Choose one</option>
+                <option>General feedback</option>
+                <option>Customer issue</option>
+                <option>Food or allergy concern</option>
+                <option>Private event request</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Visit date</span>
+              <input type="date" name="visit-date" />
+            </label>
+          </div>
+
+          <fieldset class="issue-priority form-row" data-reveal data-reveal-delay="220">
+            <legend>Priority</legend>
+            <label>
+              <input type="radio" name="priority" value="Standard" checked />
+              <span>Standard</span>
+            </label>
+            <label>
+              <input type="radio" name="priority" value="Needs follow-up" />
+              <span>Needs follow-up</span>
+            </label>
+            <label>
+              <input type="radio" name="priority" value="Urgent" />
+              <span>Urgent</span>
+            </label>
+          </fieldset>
+
+          <label class="full-field form-row" data-reveal data-reveal-delay="280">
+            <span>Your message</span>
+            <textarea
+              name="message"
+              placeholder="Tell us about your experience or the issue we should resolve..."
+              required
+            ></textarea>
+          </label>
+
+          <button class="button button-primary booking-submit form-row" type="submit" data-reveal data-reveal-delay="340">
+            Send Message
+          </button>
+          <p class="confirmation-note" data-contact-message>
+            Your message will be reviewed by our guest care team.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <p>Maison Liora</p>
+      <p>12 Garden Passage, Cairo</p>
+      <p>care@maisonliora.example</p>
+      <div class="social-links" aria-label="Social media">
+        <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3Zm0 1.8A2.7 2.7 0 0 0 4.8 7.5v9a2.7 2.7 0 0 0 2.7 2.7h9a2.7 2.7 0 0 0 2.7-2.7v-9a2.7 2.7 0 0 0-2.7-2.7Zm9.45 1.35a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1ZM12 7.8A4.2 4.2 0 1 1 7.8 12 4.2 4.2 0 0 1 12 7.8Zm0 1.8A2.4 2.4 0 1 0 14.4 12 2.4 2.4 0 0 0 12 9.6Z"
+            />
+          </svg>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M13.2 21v-7.56h2.54l.38-2.94H13.2V8.62c0-.85.24-1.43 1.46-1.43h1.56V4.56A21.37 21.37 0 0 0 13.94 4c-2.26 0-3.8 1.38-3.8 3.92v2.58H7.6v2.94h2.54V21Z"
+            />
+          </svg>
+        </a>
+        <a href="https://x.com" target="_blank" rel="noreferrer" aria-label="X">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M18.9 3H21l-4.58 5.24L21.8 21h-4.22l-3.3-4.98L9.92 21H7.8l4.9-5.6L2.2 3h4.33l2.98 4.57ZM18.16 19.2h1.17L5.9 4.71H4.64Z"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+

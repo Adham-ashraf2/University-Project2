@@ -63,3 +63,60 @@ if (revealItems.length && "IntersectionObserver" in window) {
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
+
+const bookingForm = document.querySelector("[data-booking-form]");
+const bookingMessage = document.querySelector("[data-booking-message]");
+const contactForm = document.querySelector("[data-contact-form]");
+const contactMessage = document.querySelector("[data-contact-message]");
+const roomOptions = Array.from(document.querySelectorAll("input[name='room']"));
+const roomPreview = document.querySelector("[data-room-preview]");
+const roomPreviewImage = document.querySelector("[data-room-preview-image]");
+const roomPreviewTitle = document.querySelector("[data-room-preview-title]");
+const roomPreviewText = document.querySelector("[data-room-preview-text]");
+
+if (bookingForm && bookingMessage) {
+  bookingForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    bookingMessage.textContent =
+      "Thank you. Your reservation request has been received.";
+    bookingMessage.classList.add("is-confirmed");
+  });
+}
+
+if (contactForm && contactMessage) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    contactMessage.textContent =
+      "Thank you. Your message has been received by our guest care team.";
+    contactMessage.classList.add("is-confirmed");
+    contactForm.reset();
+  });
+}
+
+function updateRoomPreview(option) {
+  if (
+    !option ||
+    !roomPreview ||
+    !roomPreviewImage ||
+    !roomPreviewTitle ||
+    !roomPreviewText
+  ) {
+    return;
+  }
+
+  roomPreview.classList.add("is-changing");
+
+  window.setTimeout(() => {
+    roomPreviewImage.src = option.dataset.roomImage;
+    roomPreviewImage.alt = option.dataset.roomAlt;
+    roomPreviewTitle.textContent = option.dataset.roomTitle;
+    roomPreviewText.textContent = option.dataset.roomText;
+    roomPreview.classList.remove("is-changing");
+  }, 180);
+}
+
+if (roomOptions.length) {
+  roomOptions.forEach((option) => {
+    option.addEventListener("change", () => updateRoomPreview(option));
+  });
+}

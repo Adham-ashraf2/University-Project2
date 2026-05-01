@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservations | Maison Liora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header about-header">
+      <a class="brand" href="index.html#home">Maison Liora</a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html#home">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="contact.html">Contact us</a>
+        <a href="about.html">About us</a>
+        <a href="locations.html">Locations</a>
+        <a href="reservations.html" aria-current="page">Booking</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="reservation-hero about-section" aria-labelledby="reservation-title">
+        <div class="reservation-hero-copy" data-reveal>
+          <p class="eyebrow">Invitations</p>
+          <h1 id="reservation-title">
+            Secure Your <span>Table</span>
+          </h1>
+          <p>
+            Step into the theatre of dining at Maison Liora. Every seat is a
+            vantage point for a curated sensory journey led by the kitchen.
+          </p>
+        </div>
+
+        <div class="reservation-hero-media" data-reveal data-reveal-delay="120">
+          <img
+            src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1400&q=85"
+            alt="A warmly lit table set with glassware and candlelight"
+          />
+          <aside class="reservation-feature" aria-label="Current tasting menu" data-reveal data-reveal-delay="260">
+            <span aria-hidden="true">X</span>
+            <h2>Curated Tasting</h2>
+            <p>
+              Our seasonal menu is currently featuring a late spring collection
+              of tomato, citrus, lamb, and fig leaf.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="reservation-layout about-section" aria-label="Reservation form and house policy">
+        <aside class="reservation-side" data-reveal>
+          <div class="policy-card">
+            <h2>House Policy</h2>
+            <article data-reveal data-reveal-delay="80">
+              <span aria-hidden="true">15</span>
+              <div>
+                <h3>Grace Period</h3>
+                <p>
+                  We hold tables for 15 minutes past the reservation time.
+                  Please call if delayed.
+                </p>
+              </div>
+            </article>
+            <article data-reveal data-reveal-delay="160">
+              <span aria-hidden="true">6+</span>
+              <div>
+                <h3>Large Parties</h3>
+                <p>
+                  Groups larger than 6 require a direct consultation with our
+                  maitre d'.
+                </p>
+              </div>
+            </article>
+            <article data-reveal data-reveal-delay="240">
+              <span aria-hidden="true">24</span>
+              <div>
+                <h3>Cancellations</h3>
+                <p>
+                  Notice must be provided 24 hours in advance to avoid a late
+                  cancellation fee.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="private-room-card" data-room-preview data-reveal data-reveal-delay="180">
+            <img
+              data-room-preview-image
+              src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=85"
+              alt="Private dining room with warm evening lighting"
+            />
+            <div>
+              <h2 data-room-preview-title>The Linen Room</h2>
+              <p data-room-preview-text>Experience our most intimate dining setting.</p>
+            </div>
+          </div>
+        </aside>
+
+        <form class="booking-form" data-booking-form data-reveal data-reveal-delay="120">
+          <div class="form-heading">
+            <h2>Reservation Details</h2>
+          </div>
+
+          <div class="form-grid form-row" data-reveal data-reveal-delay="80">
+            <label>
+              <span>Select date</span>
+              <input type="date" name="date" required />
+            </label>
+
+            <label>
+              <span>Number of guests</span>
+              <select name="guests" required>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4 Guests</option>
+                <option>5 Guests</option>
+                <option>6 Guests</option>
+              </select>
+            </label>
+          </div>
+
+          <fieldset class="time-slots form-row" data-reveal data-reveal-delay="160">
+            <legend>Available time slots</legend>
+            <label>
+              <input type="radio" name="time" value="18:00" />
+              <span>18:00</span>
+            </label>
+            <label>
+              <input type="radio" name="time" value="19:30" />
+              <span>19:30</span>
+            </label>
+            <label>
+              <input type="radio" name="time" value="20:15" checked />
+              <span>20:15</span>
+            </label>
+            <label>
+              <input type="radio" name="time" value="21:45" />
+              <span>21:45</span>
+            </label>
+          </fieldset>
+          <p class="form-note form-row" data-reveal data-reveal-delay="220">
+            Peak-hour availability may be limited.
+          </p>
+
+          <fieldset class="room-options form-row" data-reveal data-reveal-delay="250">
+            <legend>Dining room</legend>
+            <label>
+              <input
+                type="radio"
+                name="room"
+                value="The Linen Room"
+                data-room-title="The Linen Room"
+                data-room-text="Experience our most intimate dining setting with low light, linen, and dedicated service."
+                data-room-image="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=85"
+                data-room-alt="Private dining room with warm evening lighting"
+                checked
+              />
+              <span>
+                <strong>The Linen Room</strong>
+                <small>Intimate, low-lit service for a quieter evening.</small>
+              </span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="room"
+                value="The Salon"
+                data-room-title="The Salon"
+                data-room-text="Join the energy of the main dining room, with generous tables and a view into service."
+                data-room-image="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85"
+                data-room-alt="A refined restaurant dining room with tables and warm lighting"
+              />
+              <span>
+                <strong>The Salon</strong>
+                <small>Our main dining room with a view into service.</small>
+              </span>
+            </label>
+          </fieldset>
+
+          <div class="form-grid form-row" data-reveal data-reveal-delay="280">
+            <label>
+              <span>Special occasion</span>
+              <select name="occasion">
+                <option>No special occasion</option>
+                <option>Birthday</option>
+                <option>Anniversary</option>
+                <option>Business dinner</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Contact number</span>
+              <input type="tel" name="phone" placeholder="+20 000 000 0000" />
+            </label>
+          </div>
+
+          <label class="full-field form-row" data-reveal data-reveal-delay="340">
+            <span>Special requests and dietary requirements</span>
+            <textarea
+              name="requests"
+              placeholder="Please mention any allergies or specific table preferences..."
+            ></textarea>
+          </label>
+
+          <button class="button button-primary booking-submit form-row" type="submit" data-reveal data-reveal-delay="400">
+            Confirm Reservation
+          </button>
+          <p class="confirmation-note" data-booking-message>
+            A confirmation email will be sent upon booking.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <p>Maison Liora</p>
+      <p>12 Garden Passage, Cairo</p>
+      <p>hello@maisonliora.example</p>
+      <div class="social-links" aria-label="Social media">
+        <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3Zm0 1.8A2.7 2.7 0 0 0 4.8 7.5v9a2.7 2.7 0 0 0 2.7 2.7h9a2.7 2.7 0 0 0 2.7-2.7v-9a2.7 2.7 0 0 0-2.7-2.7Zm9.45 1.35a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1ZM12 7.8A4.2 4.2 0 1 1 7.8 12 4.2 4.2 0 0 1 12 7.8Zm0 1.8A2.4 2.4 0 1 0 14.4 12 2.4 2.4 0 0 0 12 9.6Z"
+            />
+          </svg>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M13.2 21v-7.56h2.54l.38-2.94H13.2V8.62c0-.85.24-1.43 1.46-1.43h1.56V4.56A21.37 21.37 0 0 0 13.94 4c-2.26 0-3.8 1.38-3.8 3.92v2.58H7.6v2.94h2.54V21Z"
+            />
+          </svg>
+        </a>
+        <a href="https://x.com" target="_blank" rel="noreferrer" aria-label="X">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M18.9 3H21l-4.58 5.24L21.8 21h-4.22l-3.3-4.98L9.92 21H7.8l4.9-5.6L2.2 3h4.33l2.98 4.57ZM18.16 19.2h1.17L5.9 4.71H4.64Z"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+
